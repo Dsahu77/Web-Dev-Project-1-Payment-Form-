@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body{
+            background-image: url("photo_2023-07-20_14-57-56.jpg");
+        }
+        form{
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        h1{
+            background-color: rgb(64, 57, 46);
+           /* margin: 0px 50px; */
+            display:inline-block;
+            padding: 0px 20px;
+            
+        }
+        #required{
+            color: blue;
+        }
+        h2{
+            background-color: rgb(103, 99, 93);
+            display: inline-block;
+            padding: 0px 20px;
+            /* text-align: center; */
+        }
+        #button{
+            background-color: rgb(175, 162, 142);
+            color: black;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Payment Form</h1>
+        <p id="required">Required fields are followed by <b>*</b></p>
+       <h2 id="h21">Contact Information:</h2>
+        <p><b>Name:<span style="color: blue;">*</span></b> <input type="text" name="name" placeholder="Enter your full name" required></p>
+           <p><b>Gender:<span style="color: blue;">*</span></b> 
+            <br>
+            Male <input type="radio" name="gender" id="male" required>
+           Female <input type="radio" name="gender" id="female" required>
+           Others <input type="radio" name="gender" id="others" required>
+        </p>
+        <p><b>Address:</b> <textarea name="address" id="address" cols="50" rows="6" placeholder="Enter your full address"></textarea></p>
+        <p><b>Email:<span style="color: blue;">*</span></b> <input type="email" name="email" id="email" placeholder="abc@gmail.com" required></p>
+        <p><b>Pincode:*</b> <input type="number" name="pincode" id="pincode" required></p>
+        <h2 id="h22" >Payment Information:</h2>
+        <p><b>Card Type:<span style="color: blue;">*</span></b>
+            <select name="cardtype" id="cardtype" required>
+                <option value="">--Select a Card Type--</option>
+                <option value="visa">Visa</option>
+                <option value="rupay">Rupay</option>
+                <option value="mastercard">Mastercard</option>
+            </select>
+        </p>
+        <p>
+            <b>Card Number:<span style="color: blue;">*</span></b> <input type="number" name="cardnumber" id="cardnumber" required> 
+        </p>
+        <p>
+            <b>Card Expiry Date:<span style="color: blue;">*</span></b>
+            <input type="date" name="CED" id="CED" required>
+        </p>
+        <p>
+            <b>CVV:<span style="color: blue;">*</span></b>
+            <input type="password" name="cvv" id="cvv" minlength="3" maxlength="4" required> 
+        </p>
+        <input type="submit" value="Pay Now" id="button">
+    </form>
+</body>
+</html>
